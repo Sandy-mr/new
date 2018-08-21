@@ -20,7 +20,6 @@ class nav extends Component{
           <li ><Link to="null">|</Link></li>
         <li className="amarillo"><Link to="#"><i className="fas fa-cart-plus"></i></Link></li>
       </ul>
-
         )
       }
     }

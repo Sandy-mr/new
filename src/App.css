@@ -53,9 +53,8 @@
 
         /* //////////////////////////Foter\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
         .ImgLogoBlak{
-
-          margin-left: 50%;
           border-bottom: solid 2px;
+          padding-bottom: 10px;
         }
         .row{
              margin-left: 15%;
@@ -71,24 +70,37 @@
           font-size: 15px
         }
 
-        .columna1{
+        footer.footer .row {
+          width: 75%;
+          text-decoration: none;
+          margin: 0 auto;
+          display: flex;
+        }
 
+        footer.footer {
+            width: 100%;
+        }
 
-          width: 33%;
-         height: auto;
-         line-height:19px;
-         font-style: 16px;
-
+        footer.footer .row .columna {
+            width: 33%;
+            height: auto;
+            line-height: 19px;
 
         }
-        .columna2{
-         width: 33%;
-         height: auto;
-         text-align: right;
 
-         font-style: 16px;
-       }
+        footer.footer .row .columna a {
+            text-decoration: none;
+        }
 
+        footer.footer .row .columna.right {
+          text-align: right;
+        }
+        .container-footer.top {
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+        }
+      
       .fab{
         text-align: justify;
 
@@ -104,9 +116,6 @@
 
              }
 
-             p{
-               cursor: none;
-             }
 
 
 
@@ -146,7 +155,7 @@
     	}
 
            /* //////////////////////////////header//////////////////////////777777777777777777777777777 */
-           .contenedorSplash {
+           .background-img {
 
          		  background-image: url("./images/landing-splash-bg.png");
               background-size: cover;
@@ -160,7 +169,7 @@
          		.header{
          				width: 100%;
          				height: 50vh;
-         				padding:75px;
+         				padding: 75px 0;
          				color: #FFF;
          				text-shadow: 1px 1px 1px #333;
 
@@ -208,4 +217,88 @@
 .subAll{
   margin-left:2%;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+.Seating-img{
+  background-image: url(./images/category-seating.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+.Tables-img{
+  background-image: url(./images/category-tables.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+.Desks-img{
+  background-image: url(./images/category-desks.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+.Storage-img{
+  background-image: url(./images/category-storage.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+.Bedroom-img{
+  background-image: url(./images/category-bedroom.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+.Miscellaneous-img{
+  background-image: url(./images/category-miscellaneous.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 80px;
+  color: white;
+}
+
+/**************** MAIN *****************/
+.page-wrapper {
+  padding: 15px;
+}
+
+/********** Browse by CATEGORY *********/
+p.category-p {
+  width: 20%;
+  padding: 15px 0;
+  display: inline-block;
+  margin: 20px;
+  border: 1px solid #22b5d6;
+}
+
+.containert.content {
+  margin: 20px 0;
+}
+
+.cateogories-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+* {
+  box-sizing: border-box;
+}
+a.button-categorory {
+  color: #22b5d6;
+  text-decoration: none;
+}
+.container-title h3 {
+  color: #777;
+  font-weight: normal;
 }

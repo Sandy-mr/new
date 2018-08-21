@@ -6,31 +6,32 @@ import ImgLogoBlak from  '../images/mf-logo-black.svg'
 class footer extends Component {
   render() {
     return(
-      <footer className="">
-           <img className="ImgLogoBlak" src={ImgLogoBlak} />
+      <footer className="footer">
+        <div className="container-footer top">
+          <img className="ImgLogoBlak" src={ImgLogoBlak} />
+        </div>
+        <div className="row">
+          <div className="columna">
+            <h3>Company</h3>
+            <p><Link to="#">About</Link> </p>
+            <p><Link to="#">Term + Conditions</Link> </p>
+          </div>
 
-         <div className="row">
-           <div className="columna1">
-             <h3>Company</h3>
-             <p><Link to="#">About</Link> </p>
-             <p><Link to="#">Term + Conditions</Link> </p>
-           </div>
+          <div className="columna">
+            <h3>Category</h3>
+            <p><Link to="#">Seating</Link></p>
+            <p><Link to="#">Tables</Link></p>
+            <p><Link to="#">Misc</Link></p>
 
-           <div className="columna1">
-             <h3>Category</h3>
-             <p><Link to="#">Seating</Link></p>
-             <p><Link to="#">Tables</Link></p>
-             <p><Link to="#">Misc</Link></p>
-
-           </div>
-           <div className="columna2">
-             <h3>Social</h3>
-             <Link to="#"><i className="fab fa-instagram"></i></Link>
-             <Link to="#"><i className="fab fa-twitter"></i></Link>
-             <Link to="#"><i className="fab fa-pinterest"></i></Link>
-           </div>
-         </div>
-       </footer>
+          </div>
+          <div className="columna right">
+            <h3>Social</h3>
+            <Link to="#"><i className="fab fa-instagram"></i></Link>
+            <Link to="#"><i className="fab fa-twitter"></i></Link>
+            <Link to="#"><i className="fab fa-pinterest"></i></Link>
+          </div>
+        </div>
+      </footer>
     )
   }
 }

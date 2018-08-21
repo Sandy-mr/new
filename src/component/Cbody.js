@@ -16,11 +16,11 @@ class Cbody extends Component {
       <div className="headers-list__red">
         <Link to="/All-Products">{this._getContentBody()[3]} Products</Link>
       </div>
-        <div className = "Cbody">
+        <div className = "info">
           <h1 className="titulo">Browse by Categories</h1>
           <h3 className="titulo1">Explore by furniture type</h3>
         </div>
-      <div className="button">
+      <div className="background">
         <li className="colorBlue"><Link to="/category/Seating">{this._getContentBody()[4]}</Link> </li>
           <li className="colorBlue"><Link to="/category/Tables">{this._getContentBody()[5]}</Link> </li>
           <li className="colorBlue"><Link to="/category/Desks">{this._getContentBody()[6]}</Link> </li>
@@ -29,10 +29,11 @@ class Cbody extends Component {
           <li className="colorBlue"><Link to="/category/Misc">{this._getContentBody()[9]}</Link> </li>
           <li ><Link to="null">|</Link></li>
           </div>
+          <div className="Background-img">
+         <img src={ImgLogoBlak} alt=""/>
+        </div>
       </section>
-      // <div className="button-img">
-      //   <img src={ImgLogoBlak} alt=""/>
-      //   </div>
+       
       )
     }
 }

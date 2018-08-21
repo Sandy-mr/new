@@ -5,17 +5,16 @@ class Headers  extends Component {
   render() {
     var bodyContent
 
-    if(this.props.match.url === "/"){
+
       bodyContent = <div className="header">
         <h1 className="text">Mallory Furniture</h1>
         <span className="textsub">Your furniture is old<br /> Ours is older.</span>
       </div>
-    }
+
     return(
-      <header className="contenedorSplash ">
+      <header className="background-img ">
         {bodyContent}
       </header>
-
     )
   }
 }

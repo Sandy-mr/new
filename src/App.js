@@ -4,7 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 
 import Nav from './component/nav.js';
 import Footer from './component/footer.js';
-import cbody from './component/Cbody.js';
+import Cbody from './component/Cbody.js';
 
 import About from './component/about.js';
 import Terms from './component/terms.js';
@@ -12,10 +12,19 @@ import header from './component/header.js';
 import home from './component/home.js'
 
 class App extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      backgroundHome: home
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <Nav />
+      <Nav />
         <Switch>
           <Route exact path="/terms" component={Terms} />
           <Route exact path="/about" component={About} />
