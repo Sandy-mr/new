@@ -10,7 +10,8 @@ import Cbody from './component/Cbody.js';
 import About from './component/about.js';
 import Terms from './component/terms.js';
 import Header from './component/header.js';
-import home from './component/home.js'
+import home from './component/home.js';
+import Category from './component/category.js';
 
 class App extends Component {
 
@@ -30,6 +31,7 @@ class App extends Component {
           <Route exact path="/terms" component={Terms} />
           <Route exact path="/about" component={About} />
           <Route exact path="/" component={home} />
+          <Route path='/category/:cat' component={Category} />
         </Switch>
         <Footer />
       </div>

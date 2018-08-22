@@ -46,22 +46,22 @@ class Home extends Component{
         <Header />
         <main className="page-wrapper">
           <div className="container featured">
-          <div className="container-title">
-            <h2>Featured Poducts</h2>
-            <h3>Check out some of our favorite listings</h3>
-          </div>
-          <div className="containert content products">
-          { this.state.collection.map(product => {
-            return (
-              <div className="product-item">
-                <img className="item-photo" src={product.imageLink}/>
-                <span className='item-name'>{product.item}</span>
-                <p className="item-price">{'$'+product.price+'.00'}</p>
-              </div>
-            );
-          })
-        }
-          </div>
+            <div className="container-title">
+              <h2>Featured Poducts</h2>
+              <h3>Check out some of our favorite listings</h3>
+            </div>
+            <div className="containert content products">
+              { this.state.collection.map(product => {
+                return (
+                  <div className="product-item">
+                    <img className="item-photo" src={product.imageLink}/>
+                    <span className='item-name'>{product.item}</span>
+                    <p className="item-price">{'$'+product.price+'.00'}</p>
+                  </div>
+                  );
+                })
+              }
+            </div>
           </div>
 
           <div className="container shop-categories">

@@ -14,9 +14,9 @@ class nav extends Component{
           <li className="colorBlue"><Link to="/category/Seating">Seating</Link> </li>
           <li className="colorBlue"><Link to="/category/Tables">Tables</Link> </li>
           <li className="colorBlue"><Link to="/category/Desks">Desks</Link> </li>
-          <li className="colorBlue"><Link to="/category/Storag">Storag</Link> </li>
+          <li className="colorBlue"><Link to="/category/Storage">Storag</Link> </li>
           <li className="colorBlue"><Link to="/category/Bedroom">Bedroom</Link> </li>
-          <li className="colorBlue"><Link to="/category/Misc">Misc</Link> </li>
+          <li className="colorBlue"><Link to="/category/Miscellaneous">Misc</Link> </li>
           <li ><Link to="null">|</Link></li>
         <li className="amarillo"><Link to="#"><i className="fas fa-cart-plus"></i></Link></li>
       </ul>
