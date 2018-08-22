@@ -1,9 +1,45 @@
 import React, { Component } from 'react'
-import Header from './header.js'
-import { Link } from "react-router-dom"
+import Header from './header.js';
+import { Link } from "react-router-dom";
+import request  from 'superagent';
+
 
 class Home extends Component{
+	constructor(){
+    super()
+    this.state={
+      collection: [],
+      filter: 'all'
+    };
+
+  }
+
+  getApi = (ENDPOINT) => {
+    return request.get(ENDPOINT);
+  }
+  fetchProducts = (response) => {
+    var newArray = []
+    response.body.forEach(function(element) {
+        if(element.featured == true)
+        newArray.push(element)
+      });
+    this.setState({
+      collection: newArray
+    })
+  }
+  getProducts(){
+    const API = 'https://mallory-furniture-admin.now.sh/api/v1/products'; 
+    this
+      .getApi(API)
+      .then(this.fetchProducts)
+  }
+
+  componentDidMount() {
+  	this.getProducts();
+  }
+  
  render() {
+  console.log(this.state.collection)
    console.log(this.props.match)
     return(
       <div>
@@ -13,6 +49,18 @@ class Home extends Component{
           <div className="container-title">
             <h2>Featured Poducts</h2>
             <h3>Check out some of our favorite listings</h3>
+          </div>
+          <div className="containert content products">
+          { this.state.collection.map(product => {
+            return (
+              <div className="product-item">
+                <img className="item-photo" src={product.imageLink}/>
+                <span className='item-name'>{product.item}</span>
+                <p className="item-price">{'$'+product.price+'.00'}</p>
+              </div>
+            );
+          })
+        }
           </div>
           </div>
 
