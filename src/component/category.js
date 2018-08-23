@@ -64,11 +64,14 @@ class Category extends Component{
        
           return(
             <div className="category-page">
-            <h2>{this.props.match.params.cat}</h2>
+            <h2 className="category-title">{this.props.match.params.cat}</h2>
                 <div className="category-buttons">
-                <button className="all-items">All items</button>
-                <button className="onsale">On SAle</button>
-                <p className="count"><span className="total-products">{this.state.collection.length}</span> items displayed</p>
+                <div className="button-it">
+                <button className="butts all-items">All items</button>
+                <button className="butts onsale">On SAle</button>
+                </div>
+                
+                <p className="count"><span className="total-products">{this.state.collection.length}</span> Items showing</p>
                 </div>
                 <div className="containert content products">
                     { this.state.collection.map(product => {
