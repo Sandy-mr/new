@@ -52,11 +52,14 @@ class Home extends Component{
             </div>
             <div className="containert content products">
               { this.state.collection.map(product => {
+                var itemUrl = '/product/'+product._id;
                 return (
                   <div className="product-item">
+                  <Link to={itemUrl}>
                     <img className="item-photo" src={product.imageLink}/>
                     <span className='item-name'>{product.item}</span>
                     <p className="item-price">{'$'+product.price+'.00'}</p>
+                  </Link>
                   </div>
                   );
                 })
@@ -74,8 +77,8 @@ class Home extends Component{
                 <p className="category-p"><Link className="button-categorory" to="/category/Seating">Seating</Link></p>
                     <p className="category-p"><Link className="button-categorory" to="/category/Desks">Desks</Link></p>
                     <p className="category-p"><Link className="button-categorory" to="/category/Tables">Tables</Link></p>
-                    <p className="category-p"><Link className="button-categorory" to="/category/Misc">Misc</Link></p>
-                    <p className="category-p"><Link className="button-categorory" to="/category/Storag">Storag</Link></p>
+                    <p className="category-p"><Link className="button-categorory" to="/category/Miscellaneous">Misc</Link></p>
+                    <p className="category-p"><Link className="button-categorory" to="/category/Storage">Storag</Link></p>
                     <p className="category-p"><Link className="button-categorory" to="/category/Bedroom">Bedroom</Link></p>
                 </div>
             </div>

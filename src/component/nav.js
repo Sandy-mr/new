@@ -6,11 +6,11 @@ class nav extends Component{
   render(){
     return(
       <ul>
-      <li><Link to="/" className="active icon-menu2" ><img src={ ImgLogo }/></Link></li>
-        <li><Link className="active" to="/about">About</Link></li>
-        <li><Link to="/terms">Terms+Conditions</Link></li>
+          <li><Link to="/" className="active icon-menu2" ><img src={ ImgLogo }/></Link></li>
+          <li><Link className="active" to="/about">About</Link></li>
+          <li><Link to="/terms">Terms+Conditions</Link></li>
           <li ><Link to="null">|</Link></li>
-          <li><Link to="/category/Allproducts">All</Link></li>
+          <li><Link to="/Allproducts">All</Link></li>
           <li className="colorBlue"><Link to="/category/Seating">Seating</Link> </li>
           <li className="colorBlue"><Link to="/category/Tables">Tables</Link> </li>
           <li className="colorBlue"><Link to="/category/Desks">Desks</Link> </li>

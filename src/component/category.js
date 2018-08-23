@@ -59,24 +59,29 @@ class Category extends Component{
     //       console.log(newArray);
     //   }
     // var col = this.getCategoryProducts()
-    render() {
+    
+    render() { 
+       
           return(
             <div className="category-page">
             <h2>{this.props.match.params.cat}</h2>
                 <div className="category-buttons">
-                <button class="all-items">All items</button>
-                <button class="onsale">On SAle</button>
-                <p class="count"><span class="total-products">{this.state.collection.length}</span> items displayed</p>
+                <button className="all-items">All items</button>
+                <button className="onsale">On SAle</button>
+                <p className="count"><span className="total-products">{this.state.collection.length}</span> items displayed</p>
                 </div>
                 <div className="containert content products">
                     { this.state.collection.map(product => {
+                        var itemUrl = '/product/'+product._id;
                         return (
-                        <div className="product-item">
-                            <img className="item-photo" src={product.imageLink}/>
-                            <span className='item-name'>{product.item}</span>
-                            <p className="item-price">{'$'+product.price+'.00'}</p>
-                        </div>
-                        );
+                            <div className="product-item">
+                                <Link to={itemUrl}>
+                                    <img className="item-photo" src={product.imageLink}/>
+                                    <span className='item-name'>{product.item}</span>
+                                    <p className="item-price">{'$'+product.price+'.00'}</p>
+                                </Link>
+                            </div>
+                            );
                         })
                     }
                 </div>
